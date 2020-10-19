@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <title>Ex3 </title>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="funcs.js"></script>
+</head>
+
+<body>
+    <h1>My gallery</h1>
+    <table id="albums">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>id</th>
+                <th>theme</th>
+            </tr>
+        </thead>
+        <tbody>
+   
+        </tbody>
+    </table>
+
+    <div class="form-popup" id="picFormDiv">
+
+        <form id="picForm" onsubmit="submitPicForm(this,event)" action="/photo" method="POST">
+
+            <h1 id="albumId"></h1><br>
+
+            <label for="photoName">Picture Name:</label><br>
+            <input type="text" name="photoName" required><br><br>
+
+            <label for="artistrName">Photographer Name:</label><br>
+            <input type="text" name="artistName" required><br><br>
+            
+            <label for="link">Link to picture:</label><br>
+            <input type="text" name="link" required><br><br>
+
+            <button type="submit" class="btn add">ADD</button>
+            <button type="button" class="btn cancel" onclick="closePicForm()">Close</button>
+
+        </form>
+    </div>
+    
+    <div class="form-popup" id="albumFormDiv">
+
+        <form onsubmit="submitAlbumForm(this,event)" action="/albums" method="POST">
+
+            <h1>Add an album</h1>
+
+            <label for="albumName">Album Name:</label><br>
+            <input type="text" name="albumName" required><br><br>
+
+            <input type="radio" name="albumCategory" value='people' checked>
+            <label for="people">People</label><br>
+            <input type="radio" name="albumCategory" value="nature">
+            <label for="nature">Nature</label><br>
+
+
+            <button type="submit" class="btn add">ADD</button>
+            <button type="button" class="btn cancel" onclick="closeAlbumForm()">Close</button>
+
+        </form>
+    </div>
+
+    <button class="open-button" onclick="openAlbumForm()">ADD AN ALBUM</button>
+
+</body>
+
+</html>

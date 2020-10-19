@@ -1,0 +1,20 @@
+{
+  "0": {
+    "name": "MyAlbum",
+    "type": "people",
+    "pictures": {
+      "0": {
+        "name": "External_Picture",
+        "photographer": "Jameel",
+        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Test-Logo.svg/783px-Test-Logo.svg.png",
+        "id": 0
+      },
+      "1": {
+        "name": "Internal_picture",
+        "photographer": "Amani",
+        "link": "../data/imgs/h.jpg",
+        "id": "1"
+      }
+    }
+  }
+}
